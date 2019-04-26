@@ -1,0 +1,42 @@
+{
+  "name": "@abckey/address-helper",
+  "version": "0.0.1",
+  "description": "address-helper",
+  "author": "abckey <hi@abckey.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepare": "rimraf dist && babel src -d dist",
+    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter src",
+    "lint:fix": "eslint --ext .js,./node_modules/eslint-friendly-formatter --fix src",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abcKeyCOM/address-helper.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.7.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^24.7.1",
+    "rimraf": "^2.6.3"
+  },
+  "dependencies": {
+    "base-x": "^3.0.5",
+    "bignumber.js": "^8.1.1",
+    "jssha": "^2.3.1"
+  },
+  "files": [
+    "dist"
+  ]
+}

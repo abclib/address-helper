@@ -1,13 +1,4 @@
 module.exports = {
   comments: false,
-  "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "targets": {
-          "safari": "tp"
-        }
-      }
-    ]
-  ]
+  presets: ['@babel/preset-env']
 }

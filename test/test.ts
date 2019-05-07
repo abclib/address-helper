@@ -1,25 +1,33 @@
 import AddressHelper from '../src/index'
 
-const valid = (address, currency, networkType) => {
-  let res = AddressHelper.test(address, currency, networkType)
+const valid = (
+  address: string,
+  name?: string,
+  network?: string
+   ) => {
+  let res = AddressHelper.test(address, name, network)
   expect(res).toBe(true)
 }
 
-const invalid = (address, currency, networkType) => {
-  let res = AddressHelper.test(address, currency, networkType)
+const invalid = (
+  address: string,
+  name?: string,
+  network?: string
+  ) => {
+  let res = AddressHelper.test(address, name, network)
   expect(res).toBe(false)
 }
 
-const commonTests = currency => {
-  invalid('', currency) // reject blank
-  invalid('%%@', currency) // reject invalid base58 string
-  invalid('1A1zP1ePQGefi2DMPTifTL5SLmv7DivfNa', currency) // reject invalid address
-  invalid('bd839e4f6fadb293ba580df5dea7814399989983', currency) // reject transaction id's
+const commonTests = (name: string) => {
+  invalid('', name) // reject blank
+  invalid('%%@', name) // reject invalid base58 string
+  invalid('1A1zP1ePQGefi2DMPTifTL5SLmv7DivfNa', name) // reject invalid address
+  invalid('bd839e4f6fadb293ba580df5dea7814399989983', name) // reject transaction id's
   // testnet
-  invalid('', currency, 'testnet') // reject blank
-  invalid('%%@', currency, 'testnet') // reject invalid base58 string
-  invalid('1A1zP1ePQGefi2DMPTifTL5SLmv7DivfNa', currency, 'testnet') // reject invalid address
-  invalid('bd839e4f6fadb293ba580df5dea7814399989983', currency, 'testnet') // reject transaction id's
+  invalid('', name, 'testnet') // reject blank
+  invalid('%%@', name, 'testnet') // reject invalid base58 string
+  invalid('1A1zP1ePQGefi2DMPTifTL5SLmv7DivfNa', name, 'testnet') // reject invalid address
+  invalid('bd839e4f6fadb293ba580df5dea7814399989983', name, 'testnet') // reject transaction id's
 }
 
 test('should return true for correct bitcoin addresses', () => {

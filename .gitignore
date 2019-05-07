@@ -1,4 +1,5 @@
-/.vscode
-/node_modules
-/@done.cmd
-/dist
+.vscode
+node_modules
+dist
+@done.cmd
+

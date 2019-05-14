@@ -1,4 +1,5 @@
 import Coins from './coins'
+import Utils from './utils'
 
 const test = (
   address: string,
@@ -11,5 +12,6 @@ const test = (
 }
 
 export default {
-  test
+  test,
+  ...Utils
 }

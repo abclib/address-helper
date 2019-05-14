@@ -27,6 +27,11 @@ const invalidTest = (t: ExecutionContext, name: string) => {
   invalid(t, 'bd839e4f6fadb293ba580df5dea7814399989983', name, 'testnet') // reject transaction id's
 }
 
+test('isSegwit', t => {
+  t.is(AddressHelper.isSegwit('BC1QW508D6QEJXTDG4Y5R3ZARVARY0C5XW7KV8F3T4', 'bc'), true)
+  t.is(AddressHelper.isSegwit('12KYrjTdVGjFMtaxERSk3gphreJ5US8aUP', 'bc'), false)
+})
+
 test('should return true for correct bitcoin addresses', t => {
   valid(t, '12KYrjTdVGjFMtaxERSk3gphreJ5US8aUP', 'bitcoin')
   valid(t, '12QeMLzSrB8XH8FvEzPMVoRxVAzTr5XM2y', 'bitcoin')
@@ -226,7 +231,7 @@ test('should return true for correct Vertcoin addresses', t => {
   valid(t, 'mvww6DEJ18dbyQUukpVQXvLgrNDJazZn1Y', 'vertcoin', 'testnet')
   valid(t, 'mn3mdEE6cf1snxVsknNz4GRTdSrWXqYp7c', 'VTC', 'testnet')
   valid(t, 'Vri6Q4GgNFfdtcpxD961TotJwaSaYQCaL5', 'VTC')
-  valid('3AXJr29rY9LYC2owNjJLv4xEPftnQTNffD', 'VTC')
+  valid(t, '3AXJr29rY9LYC2owNjJLv4xEPftnQTNffD', 'VTC')
   valid(t, 'vtc1qmzq3erafwvz23yfeu9tu45uz2kx3d7esk0rayg', 'VTC')
   valid(t, 'vtc1qhy8eqwqxpyryz4wctus36yl2uu60t0z6ecrvtc', 'VTC')
   valid(t, 'vtc1qh9y09s2crkp63mk26u3vrq9q4w3h8ee8gepjgw', 'VTC')

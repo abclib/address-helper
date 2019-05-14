@@ -9,24 +9,32 @@
     "tsc:check": "tsc --noEmit",
     "tsc:watch": "npm run tsc:check -- --watch",
     "build": "tsc",
-    "prepare": "npm run build",
-    "test": "jest"
+    "prepare": "tsc",
+    "test": "tsc & ava --verbose"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/abcKeyCOM/address-helper.git"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.12",
     "@types/node": "^11.13.8",
-    "jest": "^24.7.1",
-    "ts-jest": "^24.0.2",
-    "typescript": "^3.3.3"
+    "ava": "^1.4.1",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
   },
   "dependencies": {
-    "@abckey/crypto-helper": "^0.1.0"
+    "@abckey/crypto-helper": "^0.2.1"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  }
 }

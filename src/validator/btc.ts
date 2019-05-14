@@ -1,4 +1,5 @@
 import CryptoHelper from '@abckey/crypto-helper'
+import Utils from '../utils'
 
 const _addressType = (
   address: string,
@@ -32,7 +33,7 @@ const test = (
   address: string,
   coin: any,
   network?: string
-): boolean => isP2PKHandP2SHAddress(address, coin, network) || CryptoHelper.isSegwitAddress(address, coin.segwitHrp)
+): boolean => isP2PKHandP2SHAddress(address, coin, network) || Utils.isSegwit(address, coin.segwitHrp)
 
 export default {
   test

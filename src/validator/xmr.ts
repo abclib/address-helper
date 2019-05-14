@@ -33,7 +33,7 @@ const test = (
     if (integratedAddressRegTest.test(address)) addressType = 'integrated'
     else return false
   }
-  let cBytes = CryptoHelper.base58xmr(address).decode()
+  let cBytes = CryptoHelper.base58(address).decode('xmr')
   if (!cBytes) return false
   if (!validateNetwork(cBytes, coin, network, addressType)) return false
   let addrChecksum = cBytes.slice(-8)

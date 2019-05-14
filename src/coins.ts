@@ -123,7 +123,7 @@ const COINS = [
     symbol: 'vtc',
     size: 25,
     hash: 'sha256',
-    network: { mainnet: ['0x', '47'], testnet: ['6f', 'c4'] },
+    network: { mainnet: ['0x', '47', '05'], testnet: ['6f', 'c4'] },
     segwitHrp: 'vtc',
     validator: BTCValidator
   },

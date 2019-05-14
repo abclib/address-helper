@@ -226,6 +226,7 @@ test('should return true for correct Vertcoin addresses', t => {
   valid(t, 'mvww6DEJ18dbyQUukpVQXvLgrNDJazZn1Y', 'vertcoin', 'testnet')
   valid(t, 'mn3mdEE6cf1snxVsknNz4GRTdSrWXqYp7c', 'VTC', 'testnet')
   valid(t, 'Vri6Q4GgNFfdtcpxD961TotJwaSaYQCaL5', 'VTC')
+  valid('3AXJr29rY9LYC2owNjJLv4xEPftnQTNffD', 'VTC')
   valid(t, 'vtc1qmzq3erafwvz23yfeu9tu45uz2kx3d7esk0rayg', 'VTC')
   valid(t, 'vtc1qhy8eqwqxpyryz4wctus36yl2uu60t0z6ecrvtc', 'VTC')
   valid(t, 'vtc1qh9y09s2crkp63mk26u3vrq9q4w3h8ee8gepjgw', 'VTC')
